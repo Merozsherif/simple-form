@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>socially</title>
+    <link rel="stylesheet" href="../taskthree/all.min.css" /> 
+    <link rel="stylesheet" href="./css/design.css" />
+    <link rel="stylesheet" href="../taskthree/framework.css" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&#038;display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/5adf548edd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- start header  -->
+   <div class="container">
+        <form id="form1">
+            <h3>CREATE ACCOUNT</h3>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+           
+            <div class="btn-box">
+                <button type="button" id="next1">Next</button>
+            </div>
+        </form>
+        <form id="form2">
+            <h3>social links</h3>
+            <input type="text" placeholder="medium" >
+            <input type="text" placeholder="Github" >
+            <input type="text" placeholder="linkedin" >
+
+           
+            <div class="btn-box">
+                <button type="button" id="back1">back</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+        </form>
+        <form id="form3">
+            <h3>PERSONAL INFO </h3>
+            <input type="text" placeholder="FIRST NAME" required>
+            <input type="text" placeholder="LAST NAME" required>
+            <input type="text" placeholder="MOBILE NO." required>
+           
+            <div class="btn-box">
+                <button type="button"id="back2">back</button>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>Step 1</small></div>
+            <div class="step-col"><small>Step 2</small></div>
+            <div class="step-col"><small>Step 3</small></div>
+        </div>
+   </div>
+
+<script>
+    var form1 = document.getElementById("form1")
+    var form2 = document.getElementById("form2")
+    var form3 = document.getElementById("form3")
+
+    var next1 = document.getElementById("next1")
+    var next2 = document.getElementById("next2")
+    var back1 = document.getElementById("back1")
+    var back2 = document.getElementById("back2")
+
+    var progress = document.getElementById("progress")
+
+    next1.onclick = function() {
+        form1.style.left = "-450px";
+        form2.style.left = "40px";
+        progress.style.width = "240px";
+    }
+    back1.onclick = function() {
+        form1.style.left = "40px";
+        form2.style.left = "450px";
+        progress.style.width = "120px";
+    }
+    next2.onclick = function() {
+        form2.style.left = "-450px";
+        form3.style.left = "40px";
+        progress.style.width = "360px";
+    }
+    back2.onclick = function() {
+        form2.style.left = "40px";
+        form3.style.left = "450px";
+        progress.style.width = "240px";
+    }
+    
+</script>
+</body>
+</html>
